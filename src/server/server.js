@@ -97,7 +97,7 @@ app.post('/postAndGetFunc', (req, res)=> {
             return projectData;
             
         } catch (error) {
-                console.log("error", error);
+            console.log("error", error);
             //appropriately handle the error
         }
     };
