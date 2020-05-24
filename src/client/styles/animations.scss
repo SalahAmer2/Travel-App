@@ -1,0 +1,139 @@
+///////////////////////////////////////////
+
+/*// POP-UP & deleteXbtn BASE STYLES //*/
+
+.pop-up h1 {
+    // font-size: 48px;
+    margin: 10px 0;
+}
+
+.pop-up {
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    text-align: center;
+    z-index: 10;
+    display: none;
+}
+
+.pop-up .container {
+    background: #f0e4d4;
+    // padding: 30px;
+    // // position: absolute;
+    // top: 50px;
+    padding: 10%;
+    top: 13%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.exit {
+    // position: absolute;
+    // top: 10px;
+    // left: 10px;
+    background: #555;
+    color: #ddd;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    border-radius: 11px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.deleteXbtn {
+    // background: #555;
+    // color: #ddd;
+    font-weight: bold;
+    width: 27px;
+    // height: 22px;
+    text-align: center;
+    border-radius: 11px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 5px 5px 3px 5px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+/*// POP-UP & entryHolder ANIMATION STYLES //*/
+
+.pop-up-drop {
+    top: -200px;
+    animation: drop 0.5s ease forwards;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(500px); // transform: translateY(200px)
+    }
+    100% {
+        transform: translateY(470px);
+        // transform: translateY(200px);
+        opacity: 1;
+    }
+}
+
+.pop-up-swing {
+    top: -200px;
+    transform-origin: 10px 10px;
+    animation: swing1 1s ease forwards;
+}
+
+@keyframes swing1 {
+    0% {
+        transform: translateY(470px) rotateZ(0deg);
+    }
+    40% {
+        transform: translateY(470px) rotateZ(90deg);
+    }
+    70% {
+        transform: translateY(470px) rotateZ(70deg);
+    }
+    100% {
+        transform: translateY(470px) rotateZ(75deg);
+    }
+}
+
+.entryHolder-swing {
+    transform-origin: 10px 10px;
+    animation: swing2 1s ease forwards;
+}
+
+@keyframes swing2 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    40% {
+        transform: rotateZ(90deg);
+    }
+    70% {
+        transform: rotateZ(70deg);
+    }
+    100% {
+        transform: rotateZ(75deg);
+    }
+}
+
+.entryHolder-drop {
+    transform-origin: 10px 15px;
+    animation: drop2 0.5s ease forwards;
+}
+
+@keyframes drop2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+}

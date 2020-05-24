@@ -1,0 +1,294 @@
+@import "animations.scss";
+//Variables
+$titleColor: rgb(240, 212, 72);
+$transparentBlueBGcolor: rgba(25, 70, 100, .4);
+//
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    // position: relative;
+    /* The image used */
+    // background-image: url("../media/david-marcu-78A265wPiO4-unsplash.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 100% 100%;
+    // text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+////////////////////////////
+.centerTitle {
+    text-align: center;
+}
+
+#to-display-or-not {
+    display: none;
+}
+
+.centerBtn {
+    display: flex;
+    justify-content: center;
+}
+
+#city {
+    background-color: $transparentBlueBGcolor;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+}
+
+input {
+    margin: 0 auto 0 auto;
+}
+
+.col-sm-6 {
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.bg {
+    background-image: url('../media/david-marcu-78A265wPiO4-unsplash.jpg');
+    background-size: 100% 100%;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+img {
+    // width: 150px;
+    width: 300px;
+    height: 200px;
+}
+
+// .footer-parent {
+//     position: relative;
+// }
+// @if height(#app) {
+// }
+// .footer {
+//     position: static;
+// }
+footer {
+    background-color: #303036;
+    text-align: center;
+    color: #d3d3d3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // position: fixed;
+    // position: static;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.row h2 {
+    color: darken($titleColor, 10);
+}
+
+.enterTitleColor {
+    color: darken($titleColor, 10);
+}
+
+// @keyframes change {
+//     0% {
+//         background-position: 0 50%;
+//     }
+//     50% {
+//         background-position: 100% 50%;
+//     }
+//     100% {
+//         background-position: 0 50%;
+//     }
+// }
+#app {
+    // display: grid;
+    // grid-auto-rows: minmax(50px, auto);
+    /* grid-template-columns:  */
+    // height: 100vh;
+    /* background: #f23557; */
+    // grid-template-columns: auto;
+    color: #f0d43a;
+    // justify-content: center;
+    // grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    min-height: 100%;
+}
+
+.entry-name {
+    text-align: left;
+    float: left;
+    font-weight: bold;
+}
+
+.entry-value {
+    text-align: right;
+    float: right;
+}
+
+.holder {
+    // line-height: 400%;
+    // text-align: center;
+}
+
+.entry {
+    background: rgba(59, 74, 107, .4);
+}
+
+#allEntryHolders {
+    width: inherit;
+    // background-image: url('../media/mateus-campos-felipe-_fzl2PQH6kw-unsplash.jpg');
+    // background-size: 100% 100%;
+    // border: 5px solid $transparentBlueBGcolor;
+    // color: darken($titleColor, 10);
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.entryHolder {
+    background: $transparentBlueBGcolor;
+    // padding-bottom: 500px;
+    // padding: 10%;
+    // margin: 5% 5% 5% 0%;
+    padding: 10px;
+    width: min-content;
+    margin-bottom: 20px;
+}
+
+.date,
+.country,
+.depDate,
+.retDate,
+.daysLeft,
+.weather,
+.low_temp,
+.max_temp,
+.temp #date {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    padding: 8px;
+    justify-content: space-between;
+}
+
+.input-group-addon {
+    min-width: 37px;
+}
+
+#temp {}
+
+#content {}
+
+label {
+    color: darken($titleColor, 10);
+}
+
+.headline {
+    font-size: 2em;
+    color: darken($titleColor, 10);
+}
+
+.title {
+    font-style: italic;
+    color: darken($titleColor, 10);
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    // line-height: 310px;
+}
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+label {
+    display: block;
+    font-size: 27px;
+    font-weight: normal;
+}
+
+input {
+    display: block;
+    height: 60px;
+    width: 320px;
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button {
+    // width: 400px;
+    // height: 100px;
+    // margin-left: auto;
+    // margin-right: auto;
+    padding: 10px;
+    width: 100px;
+    background: rgba(25, 70, 100, .8);
+    color: #f0d43a;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    // border: none;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #444;
+    &:hover {
+        background: #3b4a6b;
+    }
+}
+
+h1 {
+    font-size: 36px;
+}
+
+textarea {
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+/* Style for Placeholder Text*/
+
+ ::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}

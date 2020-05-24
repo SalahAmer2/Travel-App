@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script> -->
+</head>
+
+<body>
+    <div id="pop-up-1" class="pop-up pop-up-drop">
+        <div class="container">
+            <div class="exit">x</div>
+            <h1>Invalid Dates</h1>
+        </div>
+    </div>
+    <div id="pop-up-2" class="pop-up pop-up-drop">
+        <div class="container">
+            <div class="exit">x</div>
+            <h1>Empty city name / dates</h1>
+        </div>
+    </div>
+    <div id="pop-up-3" class="pop-up pop-up-drop">
+        <div class="container">
+            <div class="exit">x</div>
+            <h1>Check city name</h1>
+        </div>
+    </div>
+    <div class="bg">
+        <label id="app">
+        <div class="holder headline centerTitle">
+            Travel App
+        </div><br>
+        <div class="holder city">
+        <label for="city" class="centerTitle">Destinations</label>
+        <input type="text" id="city" placeholder="enter city name here">
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2 class="centerTitle">Trip date</h2>
+        </div>
+        <div class="row">
+            <div class='col-sm-6'>
+                <form autocomplete="off">
+                    <div class="form-group">
+                        <div class="enterTitleColor centerTitle">Enter Departure Date</div>
+                        <div class='input-group date datepicker'>
+                            <input type='text' width="100" name="dateValue" class="form-control" id="departureDate">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                        <div class="enterTitleColor centerTitle">Enter Return Date</div>
+                        <div class='input-group date datepicker'>
+                            <input type='text' width="100" name="dateValue" class="form-control" id="returnDate">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="holder feel centerBtn">
+                        <button id="savetripBtn">Save Trip</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <label for="entryHolder" class="title">Most Recent Entry</label> -->
+    <div id="to-display-or-not" class="title centerTitle">My Trips</div>
+    <div id="allEntryHolders">
+        <!-- <div class="entryHolder">
+            <div><img src="" id="cityPhoto"></div>
+            <div id="date"></div>
+            <div id="country"></div>
+            <div id="depDate"></div>
+            <div id="retDate"></div>
+            <div id="daysLeft"></div>
+            <div id="weather"></div>
+            <div id="temp"></div>
+            <div id="low_temp"></div>
+            <div id="max_temp"></div>
+            <div id="lat"></div>
+            <div id="lng"></div>
+        </div> -->
+    </div>
+
+    </label>
+
+    <!-- <div class="footer-parent"> -->
+    <footer>Background Photo by David Marcu on Unsplash</footer>
+    <!-- </div> -->
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(function() {
+            $('.datepicker').datepicker({
+                format: "mm/dd/yyyy",
+                autoclose: true,
+                todayHighlight: true,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                autoclose: true,
+                changeMonth: true,
+                changeYear: true,
+                orientation: "button"
+            });
+        });
+
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
