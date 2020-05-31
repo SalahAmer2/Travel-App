@@ -11,6 +11,9 @@
     },
     "author": "",
     "license": "ISC",
+    "engines": {
+        "node": "12.13.1"
+    },
     "dependencies": {
         "@babel/plugin-transform-runtime": "^7.9.6",
         "aylien_textapi": "^0.7.0",
