@@ -107,8 +107,8 @@ const init = () => {
     const baseURLPixabay = "https://pixabay.com/api/?";
 
     // Create a new date instance dynamically with JS
-    let d = new Date();
-    let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear();
+    const d = new Date(); //changed it from let to const
+    const newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear(); //changed it from let to const
 
     const depDateFromUser = document.getElementById("departureDate").value;
     const returnDateFromUser = document.getElementById("returnDate").value;
