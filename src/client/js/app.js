@@ -150,7 +150,10 @@ const init = () => {
       }).then(projectData => {
         if(projectData){
           createUI(projectData);
+          console.log(projectData);
         } else {
+          console.log(projectData);
+          console.log("else statement triggered");
           savetripBtn.textContent = "Save trip";
           pop_up_3.classList.remove("pop-up-swing");
           pop_up_3.style.display = 'block';
