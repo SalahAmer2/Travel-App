@@ -19,6 +19,7 @@ app.use(cors());
 
 app.use(express.static('dist'));
 
+// This will make the IDs of the trip cards so they can be individually deleted when you press their x button 
 const create_UUID = () => {
     var dt = new Date().getTime();
     var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -29,6 +30,7 @@ const create_UUID = () => {
     return uuid;
 }
 
+//Takes needed info then sends the trip data over to the client side to make the trip cards
 app.post('/postAndGetFunc', (req, res)=> {
 
     const username = process.env.API_USERNAME;
@@ -108,6 +110,7 @@ app.post('/postAndGetFunc', (req, res)=> {
 
 });
 
+//This part deletes the targeted trip card and it recognizes the individual trip card according to its ID
 app.post('/deleteTrip', (req, res) => {
     const id = req.body.tripId;
     delete projectData[id]; 
@@ -115,12 +118,6 @@ app.post('/deleteTrip', (req, res) => {
 });
 
 // Setup Server
-// const port = '3000';
-
-// app.listen(port, () => {
-//     console.log(`Server is running on port: ${port}`);
-// });
-
 let port = process.env.PORT;
 if (port == null || port == "") {
     port = 3001;
