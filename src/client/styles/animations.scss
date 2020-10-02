@@ -103,26 +103,25 @@
     }
 }
 
-.entryHolder-swing {
-    transform-origin: 10px 10px;
-    animation: swing2 1s ease forwards;
-}
-
-@keyframes swing2 {
-    0% {
-        transform: rotateZ(0deg);
-    }
-    40% {
-        transform: rotateZ(90deg);
-    }
-    70% {
-        transform: rotateZ(70deg);
-    }
-    100% {
-        transform: rotateZ(75deg);
-    }
-}
-
+//We're currently using drop for entryHolder, not swing
+// .entryHolder-swing {
+//     transform-origin: 10px 10px;
+//     animation: swing2 1s ease forwards;
+// }
+// @keyframes swing2 {
+//     0% {
+//         transform: rotateZ(0deg);
+//     }
+//     40% {
+//         transform: rotateZ(90deg);
+//     }
+//     70% {
+//         transform: rotateZ(70deg);
+//     }
+//     100% {
+//         transform: rotateZ(75deg);
+//     }
+// }
 .entryHolder-drop {
     transform-origin: 10px 15px;
     animation: drop2 0.5s ease forwards;
